@@ -1,5 +1,5 @@
 angular.module('core.ui.directives')
-    .directive('customDatePicker', function($timeout) {
+    .directive('customDatePicker', function($timeout,QueryOperators) {
         return {
             restrict: 'E',
             templateUrl: 'customDatePicker.html',
@@ -522,4 +522,20 @@ angular.module('core.ui.directives')
                 },0)
 
             }
-        }});
+        }}).constant('QueryOperators', {
+        EQUAL: {name: 'EQUAL', label: 'Equal', sign: 'fa fa-arrows-h'},
+        NOT_EQUAL: {name: 'NOT_EQUAL', label: 'NotEqual', sign: 'fa fa-arrows-v'},
+        GREATER_THAN: {name: 'GREATER_THAN', label: 'Greater', sign: 'fa fa-chevron-right'},
+        LESS_THAN: {name: 'LESS_THAN', label: 'LessThan', sign: 'fa fa-chevron-left'},
+        GREATER_THAN_OR_EQUAL: {name: 'GREATER_THAN_OR_EQUAL', label: 'GreaterorEqual', sign: 'fa fa-chevron-circle-right'},
+        LESS_THAN_OR_EQUAL: {name: 'LESS_THAN_OR_EQUAL', label: 'LessorEqual', sign: ' fa fa-chevron-circle-left'},
+        BETWEEN: {name: 'BETWEEN', label: 'Between', sign: 'fa fa-exchange'},
+        IN: {name: 'IN', label: 'In', sign: 'fa fa-check-square'},
+        NOT_IN: {name: 'NOT_IN', label: 'NotIn', sign: 'fa fa-check-square-o'},
+        EMPTY: {name: 'EMPTY', label: 'Empty', sign: 'fa fa-circle-o'},
+        NOT_EMPTY: {name: 'NOT_EMPTY', label: 'NotEmpty', sign: 'fa fa-circle'},
+        STARTS_WITH: {name: 'STARTS_WITH', label: 'StartsWith', sign: 'fa fa-inbox'},
+        ENDS_WITH: {name: 'ENDS_WITH', label: 'EndsWith', sign: 'fa-hourglass-half'},
+        CONTAINS: {name: 'CONTAINS', label: 'Contains', sign: 'fa fa-hashtag'}
+
+    })
