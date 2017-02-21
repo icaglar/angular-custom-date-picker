@@ -1,0 +1,10 @@
+.uiselect-clear {
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-size:9px;
+  padding:5px 10px;
+  position:absolute;
+  right:30px;
+  top:4px;
+}
